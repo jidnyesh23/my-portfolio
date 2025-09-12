@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jidnyesh Chaudhari - Portfolio</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'dark-bg': '#0f172a',
+                        'light-bg': '#f8fafc',
+                        'primary': '#3b82f6',
+                        'secondary': '#8b5cf6',
+                        'text-dark': '#e2e8f0',
+                        'text-light': '#1e293b',
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-out',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                        'typing': 'typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite',
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-inter bg-light-bg dark:bg-dark-bg text-text-light dark:text-text-dark transition-all duration-300">
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/10 dark:bg-gray-900/10 backdrop-blur-md border-b border-white/20 dark:border-gray-700/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <span class="text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                        JC
+                    </span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#home" class="nav-link px-3 py-2 rounded-md text-sm font-medium hover:text-primary transition-colors">Home</a>
+                        <a href="#about" class="nav-link px-3 py-2 rounded-md text-sm font-medium hover:text-primary transition-colors">About</a>
+                        <a href="#skills" class="nav-link px-3 py-2 rounded-md text-sm font-medium hover:text-primary transition-colors">Skills</a>
+                        <a href="#projects" class="nav-link px-3 py-2 rounded-md text-sm font-medium hover:text-primary transition-colors">Projects</a>
+                        <a href="#certifications" class="nav-link px-3 py-2 rounded-md text-sm font-medium hover:text-primary transition-colors">Certifications</a>
+                        <a href="#contact" class="nav-link px-3 py-2 rounded-md text-sm font-medium hover:text-primary transition-colors">Contact</a>
+                    </div>
+                </div>
+                
+                <!-- Theme Toggle -->
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-white/10 dark:bg-gray-800/50 backdrop-blur-sm border border-white/20 dark:border-gray-700/20 hover:bg-white/20 dark:hover:bg-gray-700/50 transition-all duration-300">
+                        <i class="fas fa-sun text-yellow-500 dark:hidden"></i>
+                        <i class="fas fa-moon text-blue-400 hidden dark:block"></i>
+                    </button>
+                    
+                    <!-- Mobile menu button -->
+                    <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg bg-white/10 dark:bg-gray-800/50 backdrop-blur-sm border border-white/20 dark:border-gray-700/20">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white/10 dark:bg-gray-900/10 backdrop-blur-md border-t border-white/20 dark:border-gray-700/20">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium hover:text-primary transition-colors">Home</a>
+                <a href="#about" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium hover:text-primary transition-colors">About</a>
+                <a href="#skills" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium hover:text-primary transition-colors">Skills</a>
+                <a href="#projects" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium hover:text-primary transition-colors">Projects</a>
+                <a href="#certifications" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium hover:text-primary transition-colors">Certifications</a>
+                <a href="#contact" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium hover:text-primary transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/20 to-pink-500/20"></div>
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="1"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50"></div>
+        
+        <div class="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="animate-fade-in">
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold mb-6">
+                    <span class="bg-gradient-to-r from-primary via-secondary to-pink-500 bg-clip-text text-transparent">
+                        Jidnyesh Chaudhari
+                    </span>
+                </h1>
+                
+                <h2 class="text-xl sm:text-2xl lg:text-3xl font-semibold mb-8 text-gray-600 dark:text-gray-300">
+                    Aspiring Software Developer | MCA Student
+                </h2>
+                
+                <div class="mb-12 h-16 flex items-center justify-center">
+                    <p id="typing-text" class="text-lg sm:text-xl lg:text-2xl text-gray-500 dark:text-gray-400 font-medium">
+                        <span class="typing-cursor">|</span>
+                    </p>
+                </div>
+                
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#" class="btn-primary group">
+                        <i class="fas fa-download mr-2 group-hover:animate-bounce"></i>
+                        Resume
+                    </a>
+                    <a href="https://github.com/jidnyesh" target="_blank" class="btn-secondary group">
+                        <i class="fab fa-github mr-2 group-hover:rotate-12 transition-transform"></i>
+                        GitHub
+                    </a>
+                    <a href="https://linkedin.com/in/jidnyesh" target="_blank" class="btn-secondary group">
+                        <i class="fab fa-linkedin mr-2 group-hover:rotate-12 transition-transform"></i>
+                        LinkedIn
+                    </a>
+                    <a href="mailto:jidnyeshtc23@gmail.com" class="btn-secondary group">
+                        <i class="fas fa-envelope mr-2 group-hover:rotate-12 transition-transform"></i>
+                        Email
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-2xl text-primary opacity-70"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                    About Me
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Bio Card -->
+                <div class="glass-card p-8 rounded-2xl">
+                    <h3 class="text-2xl font-semibold mb-6 text-primary">My Journey</h3>
+                    <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                        I am a Master's student in Computer Applications with strong problem-solving skills and practical web development experience. I have built multiple personal projects that showcase my creativity and technical knowledge.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                        I have also developed and delivered <span class="text-primary font-semibold">3 client websites</span>, implementing backend systems and database integration to meet real business needs.
+                    </p>
+                </div>
+                
+                <!-- Education Timeline -->
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-semibold mb-8 text-primary">Education</h3>
+                    
+                    <div class="timeline-item">
+                        <div class="glass-card p-6 rounded-xl">
+                            <div class="flex items-center mb-3">
+                                <div class="w-3 h-3 bg-primary rounded-full mr-4"></div>
+                                <span class="text-sm font-medium text-secondary">2024-2026</span>
+                            </div>
+                            <h4 class="font-semibold text-lg mb-2">Master of Computer Applications (MCA)</h4>
+                            <p class="text-gray-600 dark:text-gray-300 mb-1">D Y Patil Institute of Masters of Computer Applications, Pune</p>
+                            <p class="text-primary font-medium">SGPA: 7.38</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="glass-card p-6 rounded-xl">
+                            <div class="flex items-center mb-3">
+                                <div class="w-3 h-3 bg-secondary rounded-full mr-4"></div>
+                                <span class="text-sm font-medium text-secondary">2021-2024</span>
+                            </div>
+                            <h4 class="font-semibold text-lg mb-2">B.Sc. Computer Science</h4>
+                            <p class="text-gray-600 dark:text-gray-300 mb-1">Sir Parshurambhau College, Pune</p>
+                            <p class="text-primary font-medium">CGPA: 7.61</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="glass-card p-6 rounded-xl">
+                            <div class="flex items-center mb-3">
+                                <div class="w-3 h-3 bg-pink-500 rounded-full mr-4"></div>
+                                <span class="text-sm font-medium text-secondary">2020-2021</span>
+                            </div>
+                            <h4 class="font-semibold text-lg mb-2">Higher Secondary Certificate (HSC)</h4>
+                            <p class="text-gray-600 dark:text-gray-300 mb-1">Tarapur Vidya Mandir, Mumbai</p>
+                            <p class="text-primary font-medium">82%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-50/50 dark:bg-gray-900/50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                    Skills & Technologies
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full mb-6"></div>
+                <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    ✅ Applied these skills in real client projects with backend + database integration.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Skilled -->
+                <div class="skill-category">
+                    <div class="glass-card p-8 rounded-2xl h-full hover:scale-105 transition-transform duration-300">
+                        <div class="text-center mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-star text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-green-600 dark:text-green-400">Skilled</h3>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="skill-item">Git</div>
+                            <div class="skill-item">GitHub</div>
+                            <div class="skill-item">GitLab</div>
+                            <div class="skill-item">Linux</div>
+                            <div class="skill-item">HTML</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Intermediate -->
+                <div class="skill-category">
+                    <div class="glass-card p-8 rounded-2xl h-full hover:scale-105 transition-transform duration-300">
+                        <div class="text-center mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-code text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-primary">Intermediate</h3>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="skill-item">DSA</div>
+                            <div class="skill-item">Java</div>
+                            <div class="skill-item">JavaScript</div>
+                            <div class="skill-item">CSS</div>
+                            <div class="skill-item">Bootstrap</div>
+                            <div class="skill-item">Tailwind</div>
+                            <div class="skill-item">React</div>
+                            <div class="skill-item">Express</div>
+                            <div class="skill-item">Node</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Basic -->
+                <div class="skill-category">
+                    <div class="glass-card p-8 rounded-2xl h-full hover:scale-105 transition-transform duration-300">
+                        <div class="text-center mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-seedling text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-yellow-600 dark:text-yellow-400">Basic</h3>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="skill-item">SQL</div>
+                            <div class="skill-item">MongoDB</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                    Featured Projects
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card group">
+                    <div class="glass-card p-6 rounded-2xl h-full hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20">
+                        <div class="mb-6">
+                            <div class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center mb-4 group-hover:rotate-12 transition-transform">
+                                <i class="fas fa-robot text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">AI-Powered Code Inspector</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">April 2025</p>
+                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                                Built with React JS, Express JS, and Google Gemini API. Intelligent code analysis, bug detection, and fix suggestions with developer-friendly UI and real-time feedback.
+                            </p>
+                        </div>
+                        <div class="mb-6">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Express</span>
+                                <span class="tech-tag">Gemini API</span>
+                            </div>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="#" class="btn-sm-primary flex-1 text-center">
+                                <i class="fab fa-github mr-2"></i>GitHub
+                            </a>
+                            <a href="#" class="btn-sm-secondary flex-1 text-center">
+                                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card group">
+                    <div class="glass-card p-6 rounded-2xl h-full hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-secondary/20">
+                        <div class="mb-6">
+                            <div class="w-12 h-12 bg-gradient-to-r from-secondary to-pink-500 rounded-lg flex items-center justify-center mb-4 group-hover:rotate-12 transition-transform">
+                                <i class="fas fa-user text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3 group-hover:text-secondary transition-colors">Portfolio Website</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">April 2025</p>
+                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                                Fully responsive portfolio using React & Tailwind with elegant animations and smooth interactivity. Modern design with glassmorphism effects.
+                            </p>
+                        </div>
+                        <div class="mb-6">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Tailwind</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="#" class="btn-sm-primary flex-1 text-center">
+                                <i class="fab fa-github mr-2"></i>GitHub
+                            </a>
+                            <a href="#" class="btn-sm-secondary flex-1 text-center">
+                                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card group">
+                    <div class="glass-card p-6 rounded-2xl h-full hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-pink-500/20">
+                        <div class="mb-6">
+                            <div class="w-12 h-12 bg-gradient-to-r from-pink-500 to-red-500 rounded-lg flex items-center justify-center mb-4 group-hover:rotate-12 transition-transform">
+                                <i class="fas fa-cloud-sun text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3 group-hover:text-pink-500 transition-colors">Live Weather Search App</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">December 2024</p>
+                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                                React + OpenWeatherMap API application providing real-time weather data with responsive design and intuitive user interface.
+                            </p>
+                        </div>
+                        <div class="mb-6">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">OpenWeather API</span>
+                                <span class="tech-tag">CSS</span>
+                            </div>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="#" class="btn-sm-primary flex-1 text-center">
+                                <i class="fab fa-github mr-2"></i>GitHub
+                            </a>
+                            <a href="#" class="btn-sm-secondary flex-1 text-center">
+                                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-20 bg-gray-50/50 dark:bg-gray-900/50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                    Certifications
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Certification Cards -->
+                <div class="cert-card">
+                    <div class="glass-card p-6 rounded-xl hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-primary/20">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-user text-white"></i>
+                            </div>
+                            <h3 class="font-semibold">Portfolio Website</h3>
+                        </div>
+                        <div class="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-full">
+                            <div class="h-2 bg-gradient-to-r from-primary to-secondary rounded-full w-full"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cert-card">
+                    <div class="glass-card p-6 rounded-xl hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-green-500/20">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-gradient-to-r from-green-400 to-emerald-500 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fab fa-git-alt text-white"></i>
+                            </div>
+                            <h3 class="font-semibold">Git & GitHub</h3>
+                        </div>
+                        <div class="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-full">
+                            <div class="h-2 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full w-full"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cert-card">
+                    <div class="glass-card p-6 rounded-xl hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-gradient-to-r from-blue-400 to-cyan-500 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fab fa-react text-white"></i>
+                            </div>
+                            <h3 class="font-semibold">React JS</h3>
+                        </div>
+                        <div class="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-full">
+                            <div class="h-2 bg-gradient-to-r from-blue-400 to-cyan-500 rounded-full w-full"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cert-card">
+                    <div class="glass-card p-6 rounded-xl hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-red-500/20">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-gradient-to-r from-red-400 to-pink-500 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fab fa-angular text-white"></i>
+                            </div>
+                            <h3 class="font-semibold">Angular</h3>
+                        </div>
+                        <div class="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-full">
+                            <div class="h-2 bg-gradient-to-r from-red-400 to-pink-500 rounded-full w-full"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cert-card">
+                    <div class="glass-card p-6 rounded-xl hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/20">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-gradient-to-r from-purple-400 to-indigo-500 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-users text-white"></i>
+                            </div>
+                            <h3 class="font-semibold">Soft Skills (TCS iON)</h3>
+                        </div>
+                        <div class="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-full">
+                            <div class="h-2 bg-gradient-to-r from-purple-400 to-indigo-500 rounded-full w-full"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cert-card">
+                    <div class="glass-card p-6 rounded-xl hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-yellow-500/20">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-cogs text-white"></i>
+                            </div>
+                            <h3 class="font-semibold text-sm">Software Engineering & Agile (Infosys)</h3>
+                        </div>
+                        <div class="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-full">
+                            <div class="h-2 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full w-full"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cert-card md:col-span-2 lg:col-span-1">
+                    <div class="glass-card p-6 rounded-xl hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-teal-500/20">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-gradient-to-r from-teal-400 to-blue-500 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-shield-alt text-white"></i>
+                            </div>
+                            <h3 class="font-semibold">DevSecOps (Infosys)</h3>
+                        </div>
+                        <div class="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-full">
+                            <div class="h-2 bg-gradient-to-r from-teal-400 to-blue-500 rounded-full w-full"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                    Get In Touch
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full mb-6"></div>
+                <p class="text-lg text-gray-600 dark:text-gray-300">
+                    Ready to collaborate? Let's build something amazing together!
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-start">
+                <!-- Contact Info -->
+                <div class="space-y-8">
+                    <div class="glass-card p-8 rounded-2xl">
+                        <h3 class="text-2xl font-bold mb-6 text-primary">Let's Connect</h3>
+                        
+                        <div class="space-y-6">
+                            <a href="mailto:jidnyeshtc23@gmail.com" class="contact-item group flex items-center p-4 rounded-xl hover:bg-primary/10 transition-all duration-300">
+                                <div class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-envelope text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold group-hover:text-primary transition-colors">Email</h4>
+                                    <p class="text-gray-600 dark:text-gray-300">jidnyeshtc23@gmail.com</p>
+                                </div>
+                            </a>
+                            
+                            <a href="https://linkedin.com/in/jidnyesh" target="_blank" class="contact-item group flex items-center p-4 rounded-xl hover:bg-primary/10 transition-all duration-300">
+                                <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
+                                    <i class="fab fa-linkedin text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold group-hover:text-primary transition-colors">LinkedIn</h4>
+                                    <p class="text-gray-600 dark:text-gray-300">Connect with me</p>
+                                </div>
+                            </a>
+                            
+                            <a href="https://github.com/jidnyesh" target="_blank" class="contact-item group flex items-center p-4 rounded-xl hover:bg-primary/10 transition-all duration-300">
+                                <div class="w-12 h-12 bg-gradient-to-r from-gray-700 to-gray-800 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
+                                    <i class="fab fa-github text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold group-hover:text-primary transition-colors">GitHub</h4>
+                                    <p class="text-gray-600 dark:text-gray-300">Check out my code</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="glass-card p-8 rounded-2xl">
+                    <h3 class="text-2xl font-bold mb-6 text-primary">Send Message</h3>
+                    
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium mb-2">Name</label>
+                            <input type="text" id="name" name="name" required
+                                class="w-full px-4 py-3 rounded-lg bg-white/50 dark:bg-gray-800/50 border border-gray-300/50 dark:border-gray-600/50 focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 backdrop-blur-sm">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                            <input type="email" id="email" name="email" required
+                                class="w-full px-4 py-3 rounded-lg bg-white/50 dark:bg-gray-800/50 border border-gray-300/50 dark:border-gray-600/50 focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 backdrop-blur-sm">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" required
+                                class="w-full px-4 py-3 rounded-lg bg-white/50 dark:bg-gray-800/50 border border-gray-300/50 dark:border-gray-600/50 focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 backdrop-blur-sm resize-none"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary w-full group">
+                            <i class="fas fa-paper-plane mr-2 group-hover:translate-x-1 transition-transform"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 dark:bg-black py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="mailto:jidnyeshtc23@gmail.com" class="social-icon group">
+                        <i class="fas fa-envelope text-xl group-hover:scale-125 transition-transform"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/jidnyesh" target="_blank" class="social-icon group">
+                        <i class="fab fa-linkedin text-xl group-hover:scale-125 transition-transform"></i>
+                    </a>
+                    <a href="https://github.com/jidnyesh" target="_blank" class="social-icon group">
+                        <i class="fab fa-github text-xl group-hover:scale-125 transition-transform"></i>
+                    </a>
+                </div>
+                
+                <div class="border-t border-gray-700 pt-8">
+                    <p class="text-gray-400">
+                        © 2025 Jidnyesh Chaudhari | Contact: 
+                        <a href="mailto:jidnyeshtc23@gmail.com" class="text-primary hover:text-secondary transition-colors">
+                            jidnyeshtc23@gmail.com
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
