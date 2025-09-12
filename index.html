@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jidnyesh Chaudhari | Portfolio</title>
+  <!-- Google Font: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    // Tailwind custom config
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            inter: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            backgroundDark: '#0f172a',
+            backgroundLight: '#f8fafc',
+            primary: '#3b82f6',
+            secondary: '#8b5cf6',
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="font-inter bg-backgroundDark text-gray-200 dark:bg-backgroundDark dark:text-gray-200 transition-colors duration-300">
+  <!-- Navigation Bar -->
+  <nav class="fixed top-0 left-0 w-full z-50 backdrop-blur bg-white/10 dark:bg-backgroundDark/50 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center space-x-8">
+          <a href="#home" class="text-xl font-semibold text-primary hover:text-secondary">JC</a>
+          <div class="hidden md:flex space-x-6">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#certifications" class="nav-link">Certifications</a>
+            <a href="#contact" class="nav-link">Contact</a>
+          </div>
+        </div>
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" class="p-2 rounded-full hover:bg-white/20 transition">
+          <svg id="theme-toggle-dark-icon" class="w-6 h-6 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 0 1 6.707 2.707a8.001 8.001 0 1 0 10.586 10.586z"/></svg>
+          <svg id="theme-toggle-light-icon" class="w-6 h-6 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 0 1 1 1v1.02a7.001 7.001 0 0 1 5.977 5.978H18a1 1 0 1 1 0 2h-1.023a7.001 7.001 0 0 1-5.977 5.978V17a1 1 0 1 1-2 0v-1.022A7.001 7.001 0 0 1 4.023 10H3a1 1 0 1 1 0-2h1.022A7.001 7.001 0 0 1 10 3.02V3a1 1 0 0 1 1-1z"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sections -->
+  <section id="home" class="min-h-screen flex items-center justify-center pt-16">Home Section</section>
+  <section id="about" class="min-h-screen flex items-center justify-center">About Section</section>
+  <section id="skills" class="min-h-screen flex items-center justify-center">Skills Section</section>
+  <section id="projects" class="min-h-screen flex items-center justify-center">Projects Section</section>
+  <section id="certifications" class="min-h-screen flex items-center justify-center">Certifications Section</section>
+  <section id="contact" class="min-h-screen flex items-center justify-center">Contact Section</section>
+
+  <!-- Footer -->
+  <footer class="py-6 text-center bg-backgroundDark text-gray-400">© 2025 Jidnyesh Chaudhari | Contact: <a href="mailto:jidnyeshtc23@gmail.com" class="text-primary hover:text-secondary">jidnyeshtc23@gmail.com</a></footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

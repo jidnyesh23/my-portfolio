@@ -1,0 +1,41 @@
+/* Custom utilities & components */
+
+/* Glassmorphism card */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px) saturate(120%);
+  -webkit-backdrop-filter: blur(10px) saturate(120%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Hover glow */
+.glow-hover {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.glow-hover:hover {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.5), 0 0 40px rgba(139, 92, 246, 0.4);
+  transform: translateY(-4px);
+}
+
+/* Typing animation */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes blink {
+  50% { border-color: transparent }
+}
+.typing {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: .15em solid #3b82f6;
+  animation: typing 3s steps(40, end), blink .75s step-end infinite;
+}
