@@ -1,0 +1,184 @@
+/* Water drop button styles and ripple animation */
+.waterdrop-btn {
+  position: relative;
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  border-radius: 60% 60% 70% 70% / 70% 70% 60% 60%;
+  background: linear-gradient(135deg, #7C3AED 0%, #4F2107 100%);
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 4px 24px 0 rgba(124,58,237,0.18);
+  border: 2px solid #7C3AED;
+  outline: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: background 0.3s, box-shadow 0.3s, transform 0.2s, border 0.3s;
+  z-index: 1;
+}
+.waterdrop-btn:hover {
+  background: linear-gradient(135deg, #7C3AED 0%, #4F2107 100%);
+  box-shadow: 0 8px 32px 0 rgba(124,58,237,0.28);
+  transform: scale(1.07);
+}
+.waterdrop-btn:active {
+  transform: scale(0.97);
+}
+.waterdrop-ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: waterdrop-ripple 0.6s linear;
+  background: rgba(124,58,237,0.25);
+  pointer-events: none;
+}
+@keyframes waterdrop-ripple {
+  to {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+/* Glowing pulse animation for Hire Me button */
+
+.hireme-animate {
+  animation: hireme-pulse 1.2s infinite;
+  will-change: box-shadow;
+}
+
+@keyframes hireme-pulse {
+  0% {
+    box-shadow: 0 0 0 0 #a259ff, 0 0 24px 8px #a259ff99;
+  }
+  50% {
+    box-shadow: 0 0 0 32px #a259ff55, 0 0 64px 16px #a259ffcc;
+  }
+  100% {
+    box-shadow: 0 0 0 0 #a259ff, 0 0 24px 8px #a259ff99;
+  }
+}
+
+@keyframes hireme-pulse {
+  0% {
+    box-shadow: 0 0 0 0 #a259ff, 0 0 24px 8px #a259ff99;
+  }
+  50% {
+    box-shadow: 0 0 0 32px #a259ff55, 0 0 64px 16px #a259ffcc;
+  }
+  100% {
+    box-shadow: 0 0 0 0 #a259ff, 0 0 24px 8px #a259ff99;
+  }
+}
+
+@keyframes navbar-slide-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px) scale(0.98);
+    filter: blur(8px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(8px) scale(1.04);
+    filter: blur(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0px);
+  }
+}
+/* body, * {
+  cursor: none !important;
+} */
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+/* @custom-variant dark (&:is(.dark *)); */
+
+:root {
+  --background: #f5f5f7;
+  --foreground: #222326;
+  --card: #e5e7eb;
+  --card-foreground: #222326;
+  --popover: #e5e7eb;
+  --popover-foreground: #222326;
+  --primary: #44464a;
+  --primary-foreground: #f5f5f7;
+  --secondary: #bdbdbd;
+  --secondary-foreground: #222326;
+  --muted: #d1d5db;
+  --muted-foreground: #6b7280;
+  --accent: #9ca3af;
+  --accent-foreground: #222326;
+  --destructive: #e57373;
+  --destructive-foreground: #222326;
+  --border: #cfd8dc;
+  --input: #cfd8dc;
+  --ring: #bdbdbd;
+  --chart-1: #616161;
+  --chart-2: #757575;
+  --chart-3: #9e9e9e;
+  --chart-4: #bdbdbd;
+  --chart-5: #e0e0e0;
+  --radius: 0.625rem;
+  --sidebar: #f5f5f7;
+  --sidebar-foreground: #222326;
+  --sidebar-primary: #44464a;
+  --sidebar-primary-foreground: #f5f5f7;
+  --sidebar-accent: #bdbdbd;
+  --sidebar-accent-foreground: #222326;
+  --sidebar-border: #cfd8dc;
+  --sidebar-ring: #bdbdbd;
+}
+
+.dark {
+  --background: #222326;
+  --foreground: #f5f5f7;
+  --card: #44464a;
+  --card-foreground: #f5f5f7;
+  --popover: #44464a;
+  --popover-foreground: #f5f5f7;
+  --primary: #f5f5f7;
+  --primary-foreground: #222326;
+  --secondary: #757575;
+  --secondary-foreground: #f5f5f7;
+  --muted: #616161;
+  --muted-foreground: #bdbdbd;
+  --accent: #9e9e9e;
+  --accent-foreground: #f5f5f7;
+  --destructive: #e57373;
+  --destructive-foreground: #222326;
+  --border: #616161;
+  --input: #616161;
+  --ring: #757575;
+  --chart-1: #bdbdbd;
+  --chart-2: #9e9e9e;
+  --chart-3: #757575;
+  --chart-4: #616161;
+  --chart-5: #44464a;
+  --sidebar: #222326;
+  --sidebar-foreground: #f5f5f7;
+  --sidebar-primary: #44464a;
+  --sidebar-primary-foreground: #f5f5f7;
+  --sidebar-accent: #757575;
+  --sidebar-accent-foreground: #f5f5f7;
+  --sidebar-border: #616161;
+  --sidebar-ring: #757575;
+}
+
+
+@keyframes pop-fade {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@layer base {
+}
