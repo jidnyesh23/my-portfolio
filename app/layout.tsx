@@ -18,13 +18,13 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Jidnyesh Chaudhari - Web Developer & Problem Solver",
   description:
-    "Portfolio of Jidnyesh Chaudhari, a passionate web developer and MCA student specializing in modern web experiences and AI-powered applications.",
+    "Delivering modern, full-stack websites with a strong focus on exceptional user Interface and user Experience and results driven design using the MERN.",
   generator: "v0.app",
   keywords: ["Web Developer", "React", "JavaScript", "Portfolio", "MCA Student", "AI Applications"],
   authors: [{ name: "Jidnyesh Chaudhari" }],
   openGraph: {
     title: "Jidnyesh Chaudhari - Web Developer",
-    description: "Passionate web developer creating modern, user-focused experiences",
+    description: "Delivering modern, full-stack websites with a strong focus on exceptional user Interface and user Experience and results driven design using the MERN.",
     type: "website",
   },
 }
