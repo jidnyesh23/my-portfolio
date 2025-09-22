@@ -147,7 +147,7 @@ export default function HeroSection() {
     };
   }, [typedText, isDeleting, roleIndex]);
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center relative" style={{ background: "linear-gradient(135deg, #020001 0%, #4F2107 50%, #000000 100%)" }}>
+  <section id="hero" className="min-h-screen flex items-center justify-center relative" style={{ background: "linear-gradient(135deg, #020001 0%, #4F2107 50%, #000000 100%)" }}>
       {/* Animated sprinkles (fluid color dots) in the background */}
       <div style={{ position: 'fixed', left: 0, top: 0, width: '100vw', height: '100vh', pointerEvents: 'none', zIndex: 0 }}>
         {sprinkles.map((s, i) => (
@@ -174,7 +174,7 @@ export default function HeroSection() {
         <div className="flex flex-col justify-center items-start space-y-8 font-bold w-full mt-12 -ml-16" style={{ animation: 'pop-fade 0.7s cubic-bezier(0.4,0,0.2,1) both' }}>
           <div className="mb-2">
             <span
-              className={`block text-xl md:text-2xl text-white/70 font-semibold${showHey ? ' animate-pop-fade' : ''}`}
+              className={`block text-xl md:text-2xl font-semibold${showHey ? ' animate-pop-fade' : ''} bg-gradient-to-r from-[#bfa16a] to-white bg-clip-text text-transparent`}
               style={{
                 letterSpacing: '0.04em',
                 marginLeft: '10px'
@@ -182,9 +182,9 @@ export default function HeroSection() {
             >Hey, I'm</span>
           </div>
           <h1 className="hero-title text-4xl md:text-5xl lg:text-6xl xl:text-6xl font-bold text-balance leading-tight text-left">
-            <span className="text-white drop-shadow-lg">Jidnyesh</span>
+            <span className="drop-shadow-lg bg-gradient-to-r from-[#bfa16a] to-white bg-clip-text text-transparent">Jidnyesh</span>
             <br />
-            <span className="text-white drop-shadow-lg">Chaudhari</span>
+            <span className="drop-shadow-lg bg-gradient-to-r from-[#bfa16a] to-white bg-clip-text text-transparent">Chaudhari</span>
           </h1>
           <div
             className="absolute right-0 top-1/2 z-10 flex items-center justify-center"
@@ -295,26 +295,26 @@ export default function HeroSection() {
               );
             })}
           </div>
-          <p className="hero-subtitle text-2xl md:text-3xl text-accent font-extrabold text-pretty leading-relaxed drop-shadow text-left" style={{ minHeight: '2.5rem' }}>
-            <span>{typedText}</span>
-            <span style={{ opacity: blink ? 1 : 0, transition: "opacity 0.2s" }}>|</span>
+          <p className="hero-subtitle text-2xl md:text-3xl font-extrabold text-pretty leading-relaxed drop-shadow text-left" style={{ minHeight: '2.5rem' }}>
+            <span className="bg-gradient-to-r from-[#bfa16a] to-white bg-clip-text text-transparent">{typedText}</span>
+            <span className="bg-gradient-to-r from-[#bfa16a] to-white bg-clip-text text-transparent" style={{ opacity: blink ? 1 : 0, transition: "opacity 0.2s" }}>|</span>
           </p>
           <div className="mt-4 mb-2 hero-buttons pt-4" style={{ marginBottom: '10px', position: 'relative', top: '-12px' }}>
             <a
               href="https://www.linkedin.com/in/jidnyesh-chaudhari-2ba832211/"
               target="_blank"
               rel="noopener noreferrer"
-              className="border border-white text-white px-8 py-4 rounded-xl font-medium transition-all duration-200 hover:scale-105 hover:shadow-2xl hover:bg-white/20 hover:backdrop-blur-md hover:border-white/40"
+              className="border border-[#bfa16a] px-8 py-4 rounded-xl font-medium transition-all duration-200 hover:scale-105 hover:shadow-2xl hover:bg-[#bfa16a]/20 hover:backdrop-blur-md hover:border-[#bfa16a]/40"
               style={{ transition: 'all 0.3s cubic-bezier(0.4,0,0.2,1)' }}
             >
-              lets connect
+              <span className="bg-gradient-to-r from-[#bfa16a] to-white bg-clip-text text-transparent">lets connect</span>
             </a>
             <a
               href="mailto:jidnyeshtc23@gmail.com"
-              className="border border-white text-white px-8 py-4 rounded-xl font-medium transition-all duration-200 hover:scale-105 hover:shadow-2xl hover:bg-white/20 hover:backdrop-blur-md hover:border-white/40 hireme-animate"
+              className="border border-[#bfa16a] px-8 py-4 rounded-xl font-medium transition-all duration-200 hover:scale-105 hover:shadow-2xl hover:bg-[#bfa16a]/20 hover:backdrop-blur-md hover:border-[#bfa16a]/40 hireme-animate"
               style={{ marginLeft: '1rem', transition: 'all 0.3s cubic-bezier(0.4,0,0.2,1)' }}
             >
-              Hire Me
+              <span className="bg-gradient-to-r from-[#bfa16a] to-white bg-clip-text text-transparent">Hire Me</span>
             </a>
           </div>
           <div className="pt-4" style={{ marginTop: '10px' }}>

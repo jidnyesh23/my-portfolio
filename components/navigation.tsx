@@ -34,7 +34,7 @@ export default function Navigation() {
           transition: 'opacity 0.6s cubic-bezier(0.4,0,0.2,1)',
         }}
       >
-        <div className="max-w-7xl mx-auto px-6 py-4">
+  <div className="max-w-7xl mx-auto px-10 py-6">
           <div className="relative flex items-center w-full">
             <div className="flex-1 flex items-center justify-center">
               <div className="hidden md:flex items-center space-x-6 justify-center">
@@ -49,10 +49,10 @@ export default function Navigation() {
                     <button
                       key={item.id}
                       onClick={() => scrollToSection(item.id)}
-                      className="font-semibold px-6 py-2 bg-transparent text-white hover:text-gray-200 hover:scale-110 transition-all duration-200 focus:outline-none drop-shadow hover:bg-white/20 hover:backdrop-blur-md cursor-pointer animate-pop-fade"
+                      className="font-semibold px-6 py-2 bg-transparent hover:scale-110 transition-all duration-200 focus:outline-none drop-shadow hover:bg-white/20 hover:backdrop-blur-md cursor-pointer animate-pop-fade"
                       style={{ position: "relative", overflow: "hidden", border: "none", borderRadius: "0.75rem", boxShadow: "none", transition: "all 0.3s cubic-bezier(0.4,0,0.2,1)", animation: "pop-fade 0.7s cubic-bezier(0.4,0,0.2,1) both" }}
                     >
-                      {item.label}
+                      <span className="bg-gradient-to-r from-[#bfa16a] to-white bg-clip-text text-transparent">{item.label}</span>
                     </button>
                   ))}
                 </div>
@@ -62,10 +62,10 @@ export default function Navigation() {
               href="https://www.linkedin.com/in/jidnyesh-chaudhari-2ba832211/"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-semibold px-8 py-3 bg-transparent text-white border border-white/30 hover:text-gray-200 hover:scale-110 transition-all duration-200 focus:outline-none drop-shadow hover:bg-white/20 hover:backdrop-blur-md hover:border-white/50 cursor-pointer rounded-md letsconnect-pop animate-pop-fade"
+              className="font-semibold px-8 py-3 bg-transparent border border-white/30 hover:scale-110 transition-all duration-200 focus:outline-none drop-shadow hover:bg-white/20 hover:backdrop-blur-md hover:border-white/50 cursor-pointer rounded-md letsconnect-pop animate-pop-fade"
               style={{ position: "relative", transition: "opacity 0.6s cubic-bezier(0.4,0,0.2,1)", animation: "pop-fade 0.7s cubic-bezier(0.4,0,0.2,1) both" }}
             >
-              Let's Connect
+              <span className="bg-gradient-to-r from-[#bfa16a] to-white bg-clip-text text-transparent">Let's Connect</span>
             </a>
             <button
               className="md:hidden text-foreground"
