@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 
 const roles = [
   "MERN Stack Developer",
-  "MCA Student",
+  "Masters pursuing Student",
   "Strong Problem Solving skills"
 ];
 
@@ -237,7 +237,7 @@ export default function HeroSection() {
                   boxShadow: "0 4px 32px 0 rgba(0,0,0,0.18)",
                   border: "2px solid rgba(255,255,255,0.5)",
                   zIndex: 2,
-                  transform: "scaleX(-1)",
+                  transform: "none",
                 }}
               />
             </div>
