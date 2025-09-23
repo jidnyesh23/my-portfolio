@@ -65,7 +65,7 @@ export default function ProjectsSection() {
             <div key={project.title} className="bg-card border border-border rounded-xl shadow-lg p-6 flex flex-col items-center">
               <img
                 src={project.image}
-                alt={project.title + ' Screenshot'}
+                alt={project.title}
                 className="w-full h-48 object-cover rounded-lg mb-4 border border-white/20"
                 style={{ background: 'rgba(0,0,0,0.04)', cursor: 'pointer' }}
                 onClick={() => {

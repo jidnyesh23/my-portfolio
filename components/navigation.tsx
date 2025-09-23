@@ -38,7 +38,7 @@ export default function Navigation() {
           <div className="relative flex items-center w-full">
             <div className="flex-1 flex items-center justify-center">
               <div className="hidden md:flex items-center space-x-6 justify-center">
-                <div className="flex items-center space-x-6 border border-white/30 rounded-xl px-2 py-1 bg-transparent" style={{ boxShadow: "none" }}>
+                <div className="flex items-center space-x-6 border border-white/30 rounded-xl px-4 py-3 bg-transparent" style={{ boxShadow: "none" }}>
                   {[
                     { label: "About", id: "about" },
                     { label: "Projects", id: "projects" },
@@ -58,12 +58,15 @@ export default function Navigation() {
                 </div>
               </div>
             </div>
+            <style>{`
+              @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.2; } }
+            `}</style>
             <a
               href="https://www.linkedin.com/in/jidnyesh-chaudhari-2ba832211/"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-semibold px-8 py-3 bg-transparent border border-white/30 hover:scale-110 transition-all duration-200 focus:outline-none drop-shadow hover:bg-white/20 hover:backdrop-blur-md hover:border-white/50 cursor-pointer rounded-md letsconnect-pop animate-pop-fade"
-              style={{ position: "relative", transition: "opacity 0.6s cubic-bezier(0.4,0,0.2,1)", animation: "pop-fade 0.7s cubic-bezier(0.4,0,0.2,1) both" }}
+              className="font-semibold px-10 py-4 bg-transparent border border-white/30 hover:scale-110 transition-all duration-200 focus:outline-none drop-shadow hover:bg-white/20 hover:backdrop-blur-md hover:border-white/50 cursor-pointer rounded-md letsconnect-pop animate-pop-fade"
+              style={{ position: "relative", transition: "opacity 0.6s cubic-bezier(0.4,0,0.2,1)", animation: "pop-fade 0.7s cubic-bezier(0.4,0,0.2,1) both, blink 1s linear infinite" }}
             >
               <span className="bg-gradient-to-r from-[#bfa16a] to-white bg-clip-text text-transparent">Let's Connect</span>
             </a>

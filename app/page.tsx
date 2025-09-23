@@ -13,7 +13,6 @@ export default function Home() {
   <main className="min-h-screen">
       <Navigation />
       <HeroSection />
-  <hr className="border-gray-300 dark:border-gray-700 my-16 mx-auto max-w-6xl h-2" />
       <div className="section-reveal">
         <AboutSection />
       </div>

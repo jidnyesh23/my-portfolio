@@ -18,10 +18,9 @@ export default function AboutSection() {
               From crafting sleek, responsive portfolios to building AI-powered applications, I thrive at the intersection of problem solving, creativity, and modern web development. My work reflects not just technical skill, but an obsession with creating intuitive, user friendly interfaces that leave a lasting impression.<br /><br />
               Driven by adaptability and a hunger to learn, I’m constantly pushing boundaries, embracing challenges, and turning code into meaningful solutions.<br /><br />
             </p>
-            <span className="text-white">Continuously learning and adapting to new technologies, with a focus on creating scalable, maintainable, and user friendly applications.</span>
-            <span className="text-white" style={{ color: '#fff' }}>Continuously learning and adapting to new technologies, with a focus on creating scalable, maintainable, and user-friendly applications.</span>
-            <span className="relative z-10" style={{ color: '#fff' }}>Continuously learning and adapting to new technologies, with a focus on creating scalable, maintainable, and user friendly applications.</span>
-            <span>Continuously learning and adapting to new technologies, with a focus on creating scalable, maintainable, and user-friendly applications.</span>
+            <p className="text-white text-xl md:text-2xl leading-relaxed text-pretty max-w-3xl mx-auto">
+              Continuously learning and adapting to new technologies, with a focus on creating scalable, maintainable, and user friendly applications.
+            </p>
           </div>
 
           {/* Stats or Highlights */}
