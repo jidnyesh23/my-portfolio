@@ -93,7 +93,8 @@ export default function ProjectsSection() {
               {/* Action Button */}
               <div className="flex justify-center pt-2">
                 <button
-                  className="bg-green-800 text-white px-6 py-3 rounded-xl font-medium hover:bg-green-900 transition-all duration-300 hover:scale-105"
+                  className="bg-green-800 text-white px-6 py-3 font-medium hover:bg-green-900 transition-all duration-300 hover:scale-105"
+                  style={{ borderRadius: '4px' }}
                   onClick={() => {
                     if (project.title === "Live Weather App") {
                       window.open("https://liveweather.page", "_blank");
