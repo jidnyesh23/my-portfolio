@@ -13,7 +13,7 @@
 ## 🚀 **Live Demo**
 
 <div align="center">
-  <a href="https://your-portfolio-url.vercel.app" target="_blank">
+  <a href="https://jidnyeshchaudhari.live" target="_blank">
     <img src="https://img.shields.io/badge/🌐%20Live%20Demo-Visit%20Portfolio-BFA16A?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Demo" />
   </a>
 </div>
