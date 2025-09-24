@@ -90,6 +90,47 @@ export default function ProjectsSection() {
                   </span>
                 ))}
               </div>
+              
+              {/* Project Links */}
+              {project.title === "Portfolio Website" && (
+                <div className="mb-4">
+                  <a 
+                    href="https://jidnyeschaudhari.live" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:text-blue-800 underline font-medium"
+                  >
+                    jidnyeschaudhari.live
+                  </a>
+                </div>
+              )}
+              
+              {project.title === "Live Weather App" && (
+                <div className="mb-4">
+                  <a 
+                    href="https://liveweather.page" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:text-blue-800 underline font-medium"
+                  >
+                    liveweather.page
+                  </a>
+                </div>
+              )}
+              
+              {project.title === "AI-Powered Code Inspector" && (
+                <div className="mb-4">
+                  <a 
+                    href="https://intellicodebyjidnyesh.app" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:text-blue-800 underline font-medium"
+                  >
+                    intellicodebyjidnyesh.app
+                  </a>
+                </div>
+              )}
+              
               {/* Action Button */}
               <div className="flex justify-center pt-2">
                 <button
